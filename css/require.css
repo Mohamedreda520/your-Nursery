@@ -1,0 +1,198 @@
+/* بسم الله الرحمن الرحيم  */
+
+/*  start Global Rules */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+:root {
+  --main-color: #13c5dd;
+  --dark-color: #03142e;
+  --green-color: #22c5b6;
+  --padding-top: 100px;
+  --main-transition: all 0.4s;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
+}
+/* End Global Rules  */
+
+/*start navbar*/
+.navbar {
+  background-color: var(--dark-color);
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  color: white;
+  font-size: 1.2rem;
+}
+.navbar .navbar-nav .nav-link .active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--green-color);
+}
+.navbar-brand img {
+  width: 85px;
+  height: 80px;
+  max-width: 100%;
+  border: 2px solid;
+  border-radius: 50%;
+}
+.navbar .navbar-toggler {
+  color: white;
+  font-size: 25px;
+  border-color: white;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler:focus[aria-expanded="true"] {
+  border-color: var(--green-color);
+}
+/*End navbar*/
+/*start land-require*/
+.land-require {
+  background: url(../imgs/req.jpg) repeat 50%;
+  position: relative;
+  width: 100%;
+  height: 70vh;
+
+  background-repeat: no-repeat;
+}
+.land-require h1 {
+  position: absolute;
+  top: 55%;
+  /* right: 2rem; */
+  color: var(--green-color);
+  font-size: 2rem;
+  font-weight: 900;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  border-right: 2px solid var(--main-color);
+  animation: control-width 2s steps(18) 6s both, blink 1s infinite;
+  overflow: hidden;
+  white-space: nowrap;
+}
+@keyframes blink {
+  from {
+    border-right-color: var(--main-color);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+@keyframes control-width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 260px;
+  }
+}
+/*End land-require*/
+/* start filter */
+.filtering.container {
+  background-color: #aaa;
+}
+.filtering .container .filtre {
+  background-color: #aaa;
+  
+  width: 100%;
+  display: flex;
+  background-color: white;
+  padding: 100px 0;
+  
+}
+.filtering .filtre ul {
+  background-color: #aaa;
+  width: 250px;
+  padding: 50px 20px;
+  direction: rtl;
+  flex: 30%;
+ 
+}
+.filtering .container .filtre ul li {
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+.filtering .container .filtre ul li  {
+  font-weight: 900;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.filtering .container .filtre .filter-imags {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 20px;
+  flex: 70%;
+  padding: 20px;
+  position: relative;
+}
+.filtering .container .filtre .filter-imags img {
+  width: 100%;
+  max-width: 100%;
+}
+.filtering .container .filtre ul li.active{
+  color: var(--bs-warning);
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+.filter-imags .up-text {
+  background-color: white;
+    padding: 20px
+}
+.filtering .container .filter-imags .up-text .text{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 30%;
+  transition: var(--main-transition);
+}
+.filtering .container .filter-imags .up-text .text:hover {
+  background-color: #ff9800;
+}
+.filtering .container .filter-imags .up-text .text:hover h3, 
+.filtering .container .filter-imags .up-text .text:hover span {
+color: white;
+}
+.filtering .container .filter-imags .up-text .text h3{
+  color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.filtering .container .filter-imags .up-text .text span{
+    font-size: 1rem;
+    font-weight: 900;
+    color: black;
+}
+.filtering .container .filtre .up-text .text .icon {
+  
+    position: absolute;
+    left: 38%;
+    top: 70%;
+    text-align: center;
+    /* width: 100px; */
+    
+}
+.filtering .container .filtre .up-text {
+  position: relative;
+}
+.filtering .container .filtre .up-text .text .icon svg{
+
+}
+/* start filter */
